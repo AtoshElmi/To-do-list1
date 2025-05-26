@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="app-container">
+            <header>
+                <h1>My Tasks</h1>
+                <p>Organize your day with ease</p>
+            </header>
+            
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+                <button id="addTaskBtn"><i class="fas fa-plus"></i></button>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-tasks"></i> All
+                </button>
+                <button class="filter-btn" data-filter="active">
+                    <i class="fas fa-circle"></i> Active
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <i class="fas fa-check-circle"></i> Completed
+                </button>
+            </div>
+            
+            <ul id="taskList"></ul>
+            
+            <div class="stats">
+                <span id="tasksLeft">0 tasks left</span>
+                <button id="clearCompleted"><i class="fas fa-broom"></i> Clear completed</button>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h2>About This Project</h2>
+            <p>A modern, responsive to-do list application with local storage persistence and intuitive filtering.</p>
+            
+            <h3>Key Features</h3>
+            <div class="feature">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <div class="feature-text">Add, complete, and delete tasks with a clean interface</div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-filter feature-icon"></i>
+                <div class="feature-text">Filter tasks by status (All, Active, Completed)</div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-save feature-icon"></i>
+                <div class="feature-text">Tasks are saved to local storage automatically</div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-mobile-alt feature-icon"></i>
+                <div class="feature-text">Fully responsive design for all devices</div>
+            </div>
+            
+            <h3>How It Works</h3>
+            <ul>
+                <li>New tasks appear in "All" and "Active" tabs</li>
+                <li>Completed tasks move to "Completed" tab</li>
+                <li>Clear all completed tasks at once</li>
+                <li>Tasks count updates automatically</li>
+            </ul>
+            
+            <h3>Technology Used</h3>
+            <p>HTML5, CSS3, JavaScript (ES6), LocalStorage API</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
